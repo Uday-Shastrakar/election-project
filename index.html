@@ -405,20 +405,22 @@
             <div class="disclaimer">
                 “ही वेबसाइट निवडणूक प्रचारासाठी वापरली जाते.”
             </div>
-            <p id="visit-count" style="margin-top: 10px; font-size: 0.8rem; color: #aaa;">एकूण भेटी: लोड होत आहे...</p>
+            <p id="visit-count" style="font-size: 0.85rem; color: #777; text-align: center;">
+                एकूण भेटी: लोड होत आहे...
+            </p>
         </div>
     </footer>
 
     <script>
-        // Visit Counter using CountAPI
-        fetch('https://api.countapi.xyz/hit/shalini-sastrakar-election/visits')
+        fetch("https://api.counterapi.dev/v1/uday-shastrakar-s-workspace/first-counter-2347/increment")
             .then(response => response.json())
             .then(data => {
-                document.getElementById('visit-count').innerText = 'एकूण भेटी: ' + data.value;
+                document.getElementById("visit-count").innerText =
+                    "एकूण भेटी: " + data.count;
             })
-            .catch(error => {
-                console.error('Error fetching visit count:', error);
-                document.getElementById('visit-count').style.display = 'none';
+            .catch(() => {
+                document.getElementById("visit-count").innerText =
+                    "एकूण भेटी: उपलब्ध नाही";
             });
     </script>
 
