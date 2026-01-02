@@ -412,7 +412,12 @@
     </footer>
 
     <script>
-        fetch("https://api.counterapi.dev/v1/uday-shastrakar-s-workspace/first-counter-2347/increment")
+        const apiKey = 'ut_nYt9XGyZDpO0TDjG7T3l0dMGh2rSrozpzaT5Nv4T';
+        fetch('https://api.counterapi.dev/v2/uday-shastrakar-s-workspace/first-counter-2347', {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`
+            }
+        })
             .then(function (response) {
                 return response.json();
             })
