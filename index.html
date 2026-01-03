@@ -2,329 +2,176 @@
 <html lang="mr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>शालिनी देवेंद्र शास्त्रकार - निवडणुक प्रचार</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>शालिनी देवेंद्र शास्त्रकार - निवडणूक प्रचार</title>
+
     <style>
         :root {
-            --primary-color: #ff9933;
-            /* Saffron */
-            --secondary-color: #138808;
-            /* Green */
-            --text-color: #333;
-            --light-bg: #f9f9f9;
-            --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary: #ff9933;
+            --secondary: #138808;
+            --text: #333;
+            --bg: #f9f9f9;
+            --white: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, .1);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Segoe UI, Tahoma, Verdana, sans-serif
         }
 
         body {
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin-bottom: 0;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6
         }
 
-        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #ffbd66);
-            color: var(--white);
-            padding: 2rem 1rem 4rem 1rem;
+            background: linear-gradient(135deg, var(--primary), #ffbd66);
+            color: #fff;
             text-align: center;
+            padding: 2rem 1rem 4rem;
             box-shadow: var(--shadow);
-            position: relative;
         }
-
-
 
         header h1 {
             font-size: 2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-weight: 700
         }
 
         header .slogan {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+            margin-top: .3rem;
+            font-size: 1.1rem
         }
 
         .ward-badge {
-            background-color: var(--white);
-            color: var(--primary-color);
-            padding: 0.4rem 1.2rem;
+            margin-top: .6rem;
+            display: inline-block;
+            background: #fff;
+            color: var(--primary);
+            padding: .4rem 1.2rem;
             border-radius: 20px;
             font-weight: bold;
-            font-size: 1rem;
-            display: inline-block;
-            margin-top: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow)
         }
 
-        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 1rem
         }
 
-        /* Hero / Photo Section */
-        .hero-section {
-            text-align: center;
+        .hero {
             margin-top: -40px;
-            margin-bottom: 2rem;
+            text-align: center
         }
 
         .hero-inner {
             display: inline-flex;
-            position: relative;
-            justify-content: center;
             align-items: center;
-            /* Gap handled by margin for absolute positioning on desktop */
+            gap: 20px
         }
 
-        .photo-placeholder {
-            /* Width/Height handled by child image or kept here to ensure container matches */
-            width: 200px;
-            height: 200px;
-            background-color: #ddd;
-            border: 6px solid var(--white);
+        .photo {
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
+            border: 5px solid #fff;
+            background: #ddd;
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .symbol {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow);
-            overflow: hidden;
-            position: relative;
-            flex-shrink: 0;
-            padding: 0;
-            /* Ensure no padding affects image fit */
-            /* Center it */
+            font-weight: bold;
+            color: var(--primary);
+            background: #fff;
+            text-align: center
         }
 
-        .candidate-photo {
-            width: 100%;
-            /* Fit container */
-            height: 100%;
-            /* Fit container */
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .photo-placeholder svg {
-            width: 60%;
-            height: 60%;
-            fill: #aaa;
-        }
-
-        /* Content Sections */
         section {
-            background: var(--white);
+            background: #fff;
             border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            box-shadow: var(--shadow)
         }
 
         h2 {
-            color: var(--primary-color);
             text-align: center;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--secondary-color);
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
+        ul {
+            list-style: none
         }
 
-        .intro-text {
-            font-size: 1.1rem;
-            text-align: center;
-            color: #444;
+        li {
+            padding: .7rem 0;
+            font-size: 1.05rem
         }
 
-        /* Priorities List */
-        .priorities-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .priorities-list li {
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-            transition: transform 0.2s;
-        }
-
-        .priorities-list li:last-child {
-            border-bottom: none;
-        }
-
-        .priorities-list li:hover {
-            background-color: #f0fff0;
-            transform: translateX(5px);
-        }
-
-        .priorities-list li::before {
-            content: '•';
-            color: var(--primary-color);
-            margin-right: 1rem;
-            font-weight: bold;
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-
-        /* CTA Section */
-        .cta-section {
+        .cta {
             background: linear-gradient(to right, #138808, #2db620);
-            color: var(--white);
-            text-align: center;
+            color: #fff;
+            text-align: center
         }
 
-        .cta-section h2 {
-            color: var(--white);
-        }
-
-        .cta-section h2::after {
-            background: var(--white);
-        }
-
-        .btn-vote {
+        .cta a {
             display: inline-block;
-            background: var(--white);
-            color: var(--secondary-color);
-            padding: 1rem 2.5rem;
+            margin-top: 1rem;
+            background: #fff;
+            color: #138808;
+            padding: .9rem 2.2rem;
             border-radius: 50px;
-            font-weight: bold;
             text-decoration: none;
-            font-size: 1.2rem;
-            margin-top: 1.5rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+            font-weight: bold
         }
 
-        .btn-vote:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            background: #fdfdfd;
-        }
-
-        /* Footer */
         footer {
+            background: #eaeaea;
             text-align: center;
-            padding: 3rem 1rem;
-            color: #666;
-            font-size: 0.95rem;
-            border-top: 1px solid #ddd;
-            margin-top: 2rem;
-            background-color: #eaeaea;
+            padding: 2rem 1rem;
+            font-size: .9rem;
+            color: #666
         }
 
         .disclaimer {
-            font-size: 0.85rem;
+            font-size: .8rem;
             color: #888;
-            margin-top: 1rem;
-            font-style: italic;
+            margin-top: .5rem
         }
 
-        .symbol-box {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-left: 20px;
-            width: max-content;
-        }
-
-        .symbol-placeholder {
-            width: 110px;
-            height: 110px;
-            background-color: #fff;
-            border: 4px solid var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: bold;
-            color: var(--primary-color);
-            box-shadow: var(--shadow);
-            font-size: 0.9rem;
-            padding: 5px;
-            flex-shrink: 0;
-            cursor: pointer;
-        }
-
-        .symbol-label {
-            margin-top: 8px;
-            font-weight: bold;
-            font-size: 1rem;
-            color: var(--primary-color);
-            background: #fff;
-            padding: 2px 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
+        @media(max-width:600px) {
             .hero-inner {
-                display: flex;
-                width: auto;
-                gap: 10px;
+                flex-direction: column
             }
 
-            .symbol-box {
-                position: static;
-                transform: none;
-                margin-left: 0;
+            .photo {
+                width: 140px;
+                height: 140px
             }
 
-            header h1 {
-                font-size: 1.6rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            .photo-placeholder {
-                width: 150px;
-                height: 150px;
-                border-width: 4px;
-            }
-
-            .symbol-placeholder {
-                width: 90px;
-                height: 90px;
-                font-size: 0.8rem;
-                border-width: 3px;
-            }
-
-            .ward-badge {
-                font-size: 0.9rem;
+            .symbol {
+                width: 80px;
+                height: 80px
             }
         }
     </style>
@@ -333,102 +180,82 @@
 <body>
 
     <header>
-        <div class="container">
-
-
-            <h1>शालिनी देवेंद्र शास्त्रकार</h1>
-
-            <p class="slogan">प्रभाग सदस्य पदाचे उमेदवार</p>
-
-            <!-- Ward Details Badge -->
-            <div class="ward-badge">प्रभाग 10, गट ब</div>
-        </div>
+        <h1>शालिनी देवेंद्र शास्त्रकार</h1>
+        <div class="slogan">प्रभाग सदस्य पदाचे उमेदवार</div>
+        <div class="ward-badge">प्रभाग 10, गट ब</div>
     </header>
 
     <div class="container">
-        <!-- Hero / Photo Section -->
-        <div class="hero-section">
-            <div class="hero-inner">
-                <!-- Candidate Photo -->
-                <div class="photo-placeholder" role="img" aria-label="उमेदवाराचा फोटो">
-                    <img src="candidate_photo.png" alt="शालिनी देवेंद्र शास्त्रकार" class="candidate-photo">
-                </div>
 
-                <!-- Voting Symbol (Right Side) -->
-                <div class="symbol-box">
-                    <div class="symbol-placeholder">
-                        येथे चिन्ह<br>लावा
-                    </div>
-                    <div class="symbol-label">निवडणूक चिन्ह</div>
+        <div class="hero">
+            <div class="hero-inner">
+                <div class="photo">
+                    <img src="candidate_photo.png" alt="शालिनी देवेंद्र शास्त्रकार" />
                 </div>
+                <div class="symbol">निवडणूक<br />चिन्ह</div>
             </div>
-            <!-- Address under photo as per consistent layout -->
-            <div style="margin-top: 15px; font-weight: 500; color: #666;">
-                एकोरी वॉर्ड, चंद्रपूर
-            </div>
+            <div style="margin-top:10px;color:#666;">एकोरी वॉर्ड, चंद्रपूर</div>
         </div>
 
-        <!-- Introduction -->
         <section>
             <h2>माझा संकल्प</h2>
-            <p class="intro-text">
-                नमस्कार! आपल्या प्रभागाचा सर्वांगीण विकास करणे हेच माझे ध्येय आहे. पारदर्शक कारभार, जबाबदारीची जाणीव आणि
-                जनसेवा हीच माझी त्रिसूत्री आहे. तुमच्या समस्या सोडवण्यासाठी आणि एकोरी वॉर्डाला विकासाच्या वाटेवर
-                नेण्यासाठी मी कटिबद्ध आहे.
+            <p style="text-align:center">
+                नमस्कार! आपल्या प्रभागाचा सर्वांगीण विकास, पारदर्शक कारभार
+                आणि जनसेवा हाच माझा संकल्प आहे. एकोरी वॉर्डच्या
+                नागरिकांसाठी प्रामाणिकपणे काम करण्यासाठी मी कटिबद्ध आहे.
             </p>
         </section>
 
-        <!-- Priorities -->
         <section>
             <h2>प्रमुख उद्दिष्टे</h2>
-            <ul class="priorities-list">
-                <li>स्वच्छता आणि आरोग्य</li>
-                <li>अखंड पाणीपुरवठा</li>
-                <li>रस्ते व मूलभूत सुविधा</li>
-                <li>महिला सुरक्षितता</li>
-                <li>युवकांसाठी रोजगार संधी</li>
+            <ul>
+                <li>• स्वच्छता आणि आरोग्य</li>
+                <li>• अखंड पाणीपुरवठा</li>
+                <li>• रस्ते व मूलभूत सुविधा</li>
+                <li>• महिला सुरक्षितता</li>
+                <li>• युवकांसाठी रोजगार संधी</li>
             </ul>
         </section>
 
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <h2>तुमचा आवाज, माझा विश्वास!</h2>
-            <p style="font-size: 1.2rem; margin-top: 10px;">“माझ्या सोबत विकासासाठी उभे राहा”</p>
-            <a class="btn-vote">पाठिंबा द्या</a>
+        <section class="cta">
+            <h2>तुमचा आवाज, माझा विश्वास</h2>
+            <p>माझ्या सोबत विकासासाठी उभे राहा</p>
+            <a href="#">पाठिंबा द्या</a>
         </section>
+
     </div>
 
     <footer>
-        <div class="container">
-            <p><strong>प्रभाग 10, गट ब</strong> | एकोरी वॉर्ड, चंद्रपूर</p>
-            <p style="margin-top:5px;">निवडणूक २०२६</p>
-            <div class="disclaimer">
-                “ही वेबसाइट निवडणूक प्रचारासाठी वापरली जाते.”
-            </div>
-            <p id="visit-count" style="font-size: 0.85rem; color: #777; text-align: center;">
-                Total visits: Loading...
-            </p>
-        </div>
+        <p><strong>प्रभाग 10, गट ब</strong> | एकोरी वॉर्ड, चंद्रपूर</p>
+        <p>निवडणूक २०२६</p>
+        <div class="disclaimer">ही वेबसाइट निवडणूक प्रचारासाठी वापरली जाते.</div>
+
+        <p id="visit-count" style="margin-top:10px;color:#777;">
+            Total visits: Loading...
+        </p>
     </footer>
 
+    <!-- CounterAPI Browser Library -->
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+
+    <!-- Visit Counter (FINAL & CORRECT) -->
     <script>
-        const apiKey = 'ut_nYt9XGyZDpO0TDjG7T3l0dMGh2rSrozpzaT5Nv4T';
-        fetch('https://api.counterapi.dev/v2/uday-shastrakar-s-workspace/first-counter-2347', {
-            headers: {
-                'Authorization': `Bearer ${apiKey}`
-            }
-        })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                document.getElementById("visit-count").innerText =
-                    "Total visits: " + data.count;
-            })
-            .catch(function () {
-                document.getElementById("visit-count").innerText =
-                    "Total visits: unavailable";
+        document.addEventListener('DOMContentLoaded', function () {
+            const counter = new Counter({
+                workspace: 'uday-shastrakars-team-2347'
             });
+
+            counter.up('first-counter-2347')
+                .then(function (result) {
+                    document.getElementById('visit-count').textContent =
+                        'Total visits: ' + result.value;
+                })
+                .catch(function (error) {
+                    console.error('CounterAPI error:', error);
+                    document.getElementById('visit-count').textContent =
+                        'Total visits: unavailable';
+                });
+        });
     </script>
 
 </body>
